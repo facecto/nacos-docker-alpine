@@ -1,4 +1,9 @@
 # nacos-docker-alpine
+![](https://img.shields.io/badge/8-jre-alpine.svg?logo=alpine-linux)
+![](https://img.shields.io/badge/jdk-1.8-green.svg?logo=java)
+![](https://img.shields.io/badge/nacos-1.4.2-green.svg)
+
+Nacos website(https://github.com/alibaba/nacos).
 ## Step1: build
 ```
 cd ./build

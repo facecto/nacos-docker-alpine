@@ -17,7 +17,7 @@ services:
 #    container_name: prometheus
 #    image: prom/prometheus:latest
 #    volumes:
-#      - ./prometheus/prometheus-standalone.yaml:/etc/prometheus/prometheus.yml
+#      - ../prometheus/prometheus-standalone.yaml:/etc/prometheus/prometheus.yml
 #    ports:
 #      - "9090:9090"
 #    depends_on:
