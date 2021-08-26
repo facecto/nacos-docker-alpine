@@ -1,0 +1,35 @@
+version: "3"
+services:
+  nacos:
+    image: nacos:142
+    container_name: nacos
+    env_file:
+      - ./nacos-standlone-mysql.env
+    volumes:
+      - ./standalone-logs/:/home/nacos/logs
+      - ./custom.properties:/home/nacos/init.d/custom.properties
+    ports:
+      - "8848:8848"
+      - "9848:9848"
+      - "9555:9555"
+    restart: on-failure
+    depends_on:
+      - mysql    
+  mysql:
+    container_name: mysql
+    ports:
+      - 3306:3306
+    image: mysql:5.7
+    volumes:
+      - ./mysql/data:/var/lib/mysql:rw
+    restart: always
+    command: [
+            '--default-authentication-plugin=mysql_native_password',
+            '--default-time-zone=+8:00'
+    ]        
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: nacos
+      MYSQL_USER: nacos
+      MYSQL_PASSWORD: nacos    
