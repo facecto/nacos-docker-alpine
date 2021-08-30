@@ -1,5 +1,6 @@
 # nacos-docker-alpine
-![](https://img.shields.io/badge/alpine.svg?logo=alpine-linux)
+[![automated](https://badgen.net/badge/icon/docker?icon=docker&label)](https://hub.docker.com/r/facecto/nacos "Docker hub")
+![](https://img.shields.io/badge/alpine-3.9-green?logo=alpine)
 ![](https://img.shields.io/badge/8-jre-alpine.svg?logo=jre)
 ![](https://img.shields.io/badge/nacos-1.4.2-green.svg)
 
@@ -18,6 +19,10 @@ docker-compose -f mysql5.7.yaml up -d
 ```
 cd ./nacos-docker-compose
 docker-compose -f standalone.yaml up -d
+```
+## Get docker image from hub.docker.com
+```
+docker pull facecto/nacos:1.4.2
 ```
 
 ## About facecto
